@@ -1,0 +1,26 @@
+{% extends 'gestao_leitura/base.html' %}
+{% block conteudo %}
+<h1 style='text-align: center;'>Detalhes do livro</h1>
+<div class="container">
+    <table class='table table-hover table-bordered'>
+        <tr>
+            <th>Id</th>
+            <th>Livro</th>
+            <th>Gênero</th>
+            <th>Resenha</th>
+            <th>Leitura concluida</th>
+            <th>Inicio da leitura</th>
+            <th>Termino da leitura</th>
+        </tr>
+        <tr>
+            <td>{{dados.id}}</td>
+            <td>{{dados.livro}}</td>
+            <td>{{dados.genero}}</td>
+            <td>{{dados.resenha}}</td>
+            <td>{{dados.status}}</td>
+            <td>{{dados.dataInicio}}</td>
+            <td>{{dados.dataTermino}}</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

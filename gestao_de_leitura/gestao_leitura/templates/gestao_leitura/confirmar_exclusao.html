@@ -1,0 +1,11 @@
+{% extends 'gestao_leitura/base.html' %}
+{% block conteudo %}
+<div class="container">
+    <form method='POST'>
+        {% csrf_token %}
+        <h1> Confirmar exclusao de leitura</h1>
+        <button class="btn btn-default"> <a href="{% url 'minhas_leituras' %}">Cancelar</a></button>
+        <button class="btn btn-danger" type="submit">Confirmar</button>
+    </form>
+</div>
+{% endblock %}

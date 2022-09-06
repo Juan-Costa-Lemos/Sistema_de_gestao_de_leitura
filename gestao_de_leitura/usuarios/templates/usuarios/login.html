@@ -1,0 +1,17 @@
+{% extends 'gestao_leitura/base.html' %}
+{% load crispy_forms_tags %}
+{% block conteudo %}
+    
+<div class="container">
+    <h1>Login</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        
+        {{ form | crispy }}
+        <button type="submit" class="btn btn-primary">Fazer login</button>
+        <a href="{% url 'novo_usuario' %}">Ainda não possui um usuario? Clique aqui...</a>
+    </form>
+    
+</div>
+
+{% endblock %}

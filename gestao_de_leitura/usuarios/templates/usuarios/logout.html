@@ -1,0 +1,15 @@
+{% extends 'gestao_leitura/base.html' %}
+{% load crispy_forms_tags %}
+{% block conteudo %}
+    
+<div class="container">
+    <h1>Você saiu do sistema</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <a href="{% url 'home' %}">Voltar para pagina inicial</a>
+        <a href="{% url 'login' %}">Deseja fazer o login novamente?</a>
+    </form>
+    
+</div>
+
+{% endblock %}

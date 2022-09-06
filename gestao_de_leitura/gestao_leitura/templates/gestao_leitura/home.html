@@ -1,0 +1,16 @@
+{% extends 'gestao_leitura/base.html' %}
+{% block conteudo %}
+
+<div class="container">
+
+    <form method="GET">
+        {% csrf_token %}
+        <h1>Bem vindo ao Gestor de leitura!</h1>
+
+        <h2>Deseja fazer o login?</h2>
+        <a href="{% url 'login' %}" >Entrar </a>
+        <a href="{% url 'minhas_leituras' %}" >Ir para minhas leituras </a>
+    </form>
+</div>
+
+{% endblock %}
