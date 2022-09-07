@@ -19,6 +19,7 @@ from gestao_leitura import views
 from django.contrib.auth import views as auth_views
 from usuarios import views as usuarios_views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/',auth_views.LoginView.as_view(template_name = 'usuarios/login.html'), name='login'),
@@ -31,3 +32,4 @@ urlpatterns = [
     path('nova_leitura/<int:id_leituras>',views.editar,name='editar'),
     path('excluir_leitura/<int:id_leituras>',views.excluir,name='excluir'),
 ]
+

@@ -3,17 +3,16 @@ from django.db import models
 
 class Leituras(models.Model):
     STATUS_CHOICES = (
-        ("N", "Não lido"),
-        ("L", "Lendo"),
-        ("C", "Concluido")
+        ("Não lido", "Não lido"),
+        ("Concluido", "Concluido")
     )
     GENERO_CHOICES = (
-        ("F","Fantasia"), 
-        ("FC","Ficção científica"),
-        ("D","Distopia" ),
-        ("AV","Ação e aventura"),
-        ("H","Horror"),
-        ("TS","Thriller e Suspense")
+        ("Fantasia","Fantasia"), 
+        ("Ficção científica","Ficção científica"),
+        ("Distopia","Distopia" ),
+        ("Ação e aventura","Ação e aventura"),
+        ("Horror","Horror"),
+        ("Thriller e Suspense","Thriller e Suspense")
     )
     livro = models.CharField(max_length=50)
     genero = models.CharField(max_length=50,default=False, choices=GENERO_CHOICES, blank=False, null=False)

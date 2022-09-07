@@ -1,10 +1,20 @@
 {% extends 'gestao_leitura/base.html' %}
 {% block conteudo %}
 {% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-<div class="container">
-    <h1>Formulário de Nova leitura </h1>
-    <form action="" method="POST">
+    <title>Cadastrar leitura</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Formulário de Nova leitura </h1>
+        <form action="" method="POST">
         {% csrf_token %}
         
         {{formulario | crispy }}
@@ -13,4 +23,6 @@
     
 </div>
 
+</body>
+</html>
 {% endblock %}
