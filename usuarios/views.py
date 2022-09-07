@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .forms import UserRegisterForm
 from django.contrib import messages
+from .forms import UserRegisterForm
 
 # Create your views here.
 
@@ -14,5 +14,6 @@ def novo_usuario(request):
             return redirect('login')
     else:
         formulario = UserRegisterForm()
-    return render(request,'usuario/registrar.html',{'formulario': formulario})
+
+    return render(request, 'usuarios/registrar.html', {'formulario': formulario})
 

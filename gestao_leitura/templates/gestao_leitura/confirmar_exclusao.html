@@ -11,11 +11,12 @@
 </head>
 <body>
     
-<div class="container">
+<div class="container" style="text-align:center">
     <form method='POST'>
         {% csrf_token %}
-        <h1> Confirmar exclusao de leitura</h1>
-        <button class="btn btn-default"> <a href="{% url 'minhas_leituras' %}">Cancelar</a></button>
+        <h1> Confirmar exclusão</h1>
+        <button class="btn btn-primary" ><a style='color:white;' href="{% url 'minhas_leituras' %}">Cancelar</a> </button>
+        
         <button class="btn btn-danger" type="submit">Confirmar</button>
     </form>
 </div>
