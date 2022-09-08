@@ -1,39 +1,29 @@
 {% extends 'gestao_leitura/base.html' %}
 {% block conteudo %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Gestor de leitura</title>
-</head>
-<body>
-    <div class="container">
-        
-        <form method="GET">
-            {% csrf_token %}
-            <hr>
-            <h1 >Bem vindo ao Gestor de leitura!</h1>
-            <hr>
-            
-            {% if user.is_authenticated %}
-            
-            <a class="btn btn-primary" href="{% url 'minhas_leituras' %}" >Ir para minhas leituras </a>
-            <hr>
-            <h2>Deseja sair?</h2>
-            <hr>
-            <a class="btn btn-warning" href="{% url 'logout' %}" >Sair </a>
-            {% else %}
-            <hr>
-            <h3>Deseja fazer o login?</h3>
-            <hr>
-            <a class="btn btn-primary" href="{% url 'login' %}" >Entrar </a>
-            {% endif %}
-        </form>
-    </div>
-</body>
 
-</html>
+
+<div class="container">
+        
+    <form method="GET">
+        {% csrf_token %}
+        <hr>
+        <h1 >Bem vindo ao Gestor de leitura!</h1>
+        <hr>
+            
+        {% if user.is_authenticated %}
+            
+        <a class="btn btn-primary" href="{% url 'minhas_leituras' %}" >Ir para minhas leituras </a>
+        <hr>
+        <h2>Deseja sair?</h2>
+        <hr>
+        <a class="btn btn-warning" href="{% url 'logout' %}" >Sair </a>
+        {% else %}
+        <hr>
+        <h3>Deseja fazer o login?</h3>
+        <hr>
+        <a class="btn btn-primary" href="{% url 'login' %}" >Entrar </a>
+        {% endif %}
+    </form>
+</div>
+
 {% endblock %}
