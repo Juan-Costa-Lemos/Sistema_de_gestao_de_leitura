@@ -29,7 +29,7 @@ urlpatterns = [
     path('',views.home,name='home'),
     path('minhas_leituras/',views.minhas_leituras,name='minhas_leituras'),
     path('nova_leitura',views.criar,name='nova_leitura'),
-    path('/<int:id_leituras>',views.detalhe,name='detalhe'),
+    path('minhas_leituras/<int:id_leituras>',views.detalhe,name='detalhe'),
     path('nova_leitura/<int:id_leituras>',views.editar,name='editar'),
     path('excluir_leitura/<int:id_leituras>',views.excluir,name='excluir'),
 ]

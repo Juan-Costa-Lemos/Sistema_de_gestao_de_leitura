@@ -12,16 +12,16 @@
             
         {% if user.is_authenticated %}
             
-        <a class="btn btn-primary" href="{% url 'minhas_leituras' %}" >Ir para minhas leituras </a>
+        <button class="btn btn-primary" ><a style='color:white;' href="{% url 'minhas_leituras' %}" >Ir para minhas leituras </a></button>
         <hr>
         <h2>Deseja sair?</h2>
         <hr>
-        <a class="btn btn-warning" href="{% url 'logout' %}" >Sair </a>
+        <button class="btn btn-warning"><a style='color:white;' href="{% url 'logout' %}" >Sair </a></button>
         {% else %}
         <hr>
         <h3>Deseja fazer o login?</h3>
         <hr>
-        <a class="btn btn-primary" href="{% url 'login' %}" >Entrar </a>
+        <button class="btn btn-primary"><a style='color:white;'  href="{% url 'login' %}" >Entrar </a></button>
         {% endif %}
     </form>
 </div>
