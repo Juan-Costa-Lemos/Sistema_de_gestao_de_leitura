@@ -3,8 +3,9 @@ from django.db import models
 
 class Leituras(models.Model):
     STATUS_CHOICES = (
-        ("Não lido", "Não lido"),
-        ("Concluido", "Concluido")
+        ("Não iniciado", "Não iniciado"),
+        ("Não Concluído", "Não Concluído"),
+        ("Concluído", "Concluído")
     )
     GENERO_CHOICES = (
         ("Fantasia","Fantasia"),
