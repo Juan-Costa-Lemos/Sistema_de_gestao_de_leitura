@@ -5,7 +5,12 @@ from django.contrib.auth.forms import UserCreationForm
 
 class UserRegisterForm(UserCreationForm):
     GENERO_CHOICES = (
-        ("Fantasia","Fantasia"), 
+        ("Fantasia","Fantasia"),
+        ("Humor","Humor"), 
+        ("Literatura Brasileira","Literatura Brasileira"), 
+        ("Romance","Romance"), 
+        ("Autoajuda","Autoajuda"), 
+        ("Biografia","Biografia"), 
         ("Ficção científica","Ficção científica"),
         ("Distopia","Distopia" ),
         ("Ação e aventura","Ação e aventura"),
