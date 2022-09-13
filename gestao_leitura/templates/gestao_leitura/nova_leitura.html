@@ -3,11 +3,15 @@
 {% load crispy_forms_tags %}
 
 <div class="container">
-    <h1>Formulário de Nova leitura </h1>
+    <h1>Nova leitura </h1>
     <form action="" method="POST">
     {% csrf_token %}
-        
-    {{formulario | crispy }}
+    <div class="row">
+        <div class="col-md-auto">
+            {{formulario | crispy }}
+
+        </div>
+    </div>    
     <button type="submit" class="btn btn-success">Salvar</button>
     </form>
     

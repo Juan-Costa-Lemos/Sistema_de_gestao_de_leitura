@@ -7,8 +7,13 @@
     <h1>Você saiu do sistema</h1>
     <form method="POST">
         {% csrf_token %}
-        <a href="{% url 'home' %}">Voltar para pagina inicial</a>
-        <a href="{% url 'login' %}">Deseja fazer o login novamente?</a>
+        <p>        
+            <a href="{% url 'home' %}">Voltar para pagina inicial</a>
+        </p>
+        <p>
+            <a href="{% url 'login' %}">Deseja fazer o login novamente?</a>
+
+        </p>
     </form>
     
 </div>

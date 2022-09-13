@@ -2,17 +2,20 @@
 {% block conteudo %}
 
 <div class='container'>
+    {% if user.is_authenticated %}
     <h1 style='text-align: center;'>Minhas Leituras</h1>
     <button class='btn btn-success' style='margin-bottom: 10px;'><a style='color:white;'href="{% url 'nova_leitura' %}">Nova Leitura</a></button>
-    <table class='table table-striped table-bordered'>
-                <tr>
-                    <th>Id</th>
-                    <th>livro</th>
-                    <th>Status de conclusão</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
+    <table class='table table-striped table-bordered table-hover'>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>livro</th>
+                <th>Status de conclusão</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
                 {% for dado in dados %}
                 <tr>
                     <td>{{dado.id}}</td>
@@ -28,6 +31,9 @@
             </tr>
         {% endfor %}
     </table>
+    {% else %}
+    <h1 style="text-align: center;">Você deve estar logado para acessar essa pagina.</h1>
+    {% endif %}
 </div>
  
 {% endblock %}
