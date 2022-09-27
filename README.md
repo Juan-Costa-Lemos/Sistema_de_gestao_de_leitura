@@ -5,7 +5,7 @@ Sistema de gestão de leitura feito como projeto proposto no curso da Dev Aprend
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
 | :sparkles: Nome        | **Sistema de gestão de leitura**
-| :label: Tecnologias | Python, Dajngo, html
+| :label: Tecnologias | Python, Django, html
 | :rocket: URL         | https://gestao-leitura.herokuapp.com/
 
 
